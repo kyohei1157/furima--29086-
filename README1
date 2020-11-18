@@ -1,11 +1,5 @@
 ## users
 
-|Column|Type|Options|
-|------|----|-------|
-・name
-・email
-
-
 |Column   |Type  |Options    |
 |---------|------|-----------|
 |nickname |string|null: false|
@@ -13,33 +7,9 @@
 |password |string|null: false|
 |birthday |string|null: false|
 
-
 ### Association
 has_many :items
 has_many :buy_records
-
-has_one :street_add
-
-## items
-
-|Column|Type|Options|
-|------|----|-------|
-・item_name
-・category
-・price
-・seller
-
-
-### Association
-has_one :buy_records
-has_one :street_add
-
-## buy_records
-
-|Column|Type|Options|
-|------|----|-------|
-・when
-・what
 
 ## items
 
@@ -63,23 +33,12 @@ has_one :buy_record
 |Which |references|null: false, foreign_key: true|
 
 
-
 ### Association
 has_one :street_add
 belongs_to :user
 belongs_to :item
 
 ## street_add
-
-
-|Column|Type|Options|
-|------|----|-------|
-・add
-
-
-### Association
-belongs_to :user
-belongs_to :item
 
 |Column       |Type       |Options                       |
 |-------------|-----------|------------------------------|
